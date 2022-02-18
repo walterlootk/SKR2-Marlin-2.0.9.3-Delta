@@ -191,4 +191,8 @@ If you made some changes to the bed or shifted the endstops, you can do this to 
 - Restart the Delta, to be sure.<br>
 - The LCD value after Auto Home will be 310.13<br>
   => 310.13= 338.60-28.47<br>
+  - Finally, do the paper check one more time. If it is too high or low, adjust the difference at the >Configuration>Probe Z-Offs setting.<br>
+- Example, if the new check shows -0.375 (too far from bed), the new result should be (16.80+0.375)=17.175<br>
+- Change the offset value at Configuration>Probe Z-Offs. Use the knob to adjust the -16.80 to -17.17<br>
+- Do a Store Settings
 - This is old school way, and you only do it once.<br>
