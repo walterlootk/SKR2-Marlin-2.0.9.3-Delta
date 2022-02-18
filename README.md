@@ -89,6 +89,8 @@ line 970 #define E0_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 1069  #define DEFAULT_ACCELERATION          2500 (from 3000)<br>
 line 1071 #define DEFAULT_TRAVEL_ACCELERATION   2500 (from 3000)<br>
 line 1139 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN (disabled)<br>
+line 1317  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -17.175 }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- default was -16.80<br>
 line 1475 #define INVERT_Y_DIR false (from true)<br>
 line 1476 #define INVERT_Y_DIR false (from true)<br>
 line 1477 #define INVERT_Y_DIR false (from true)<br>
