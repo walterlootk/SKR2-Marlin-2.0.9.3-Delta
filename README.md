@@ -13,7 +13,7 @@ From 14-02-2022 onwards, I upgrade the firmware to the latest 2.0.9.3 stable ver
 
 Marlin Configuration - for AnyCubic Kossel Pulley DELTA Printer<P>
 
-Description: Upgrading from Marlin version 2.0.9.2 (Bugfix)  to 2.0.9.3 (Stable)<P>
+Description: Upgrading from Marlin version 2.0.9.2 (Bugfix)  to 2.0.9.3 (Stable). Some of the information that I added, like the (J) Bonus is another way to help me remember what I did or can do when I hit similar problems later.<P>
 
 Marlin Firmware<br>
 ===========<P>
@@ -79,10 +79,9 @@ line 507 #define TEMP_SENSOR_BED 5 (default)<br>
 line 798 //#define DELTA_HOME_TO_SAFE_ZONE<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- disable so that print head will not go down like 50mm after homing<br>
 line 814 #define DELTA_CALIBRATION_DEFAULT_POINTS 4 (No change)<br>
-line 849 #define DELTA_HEIGHT 305.00   (default: 320)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I set it higher as mine is about 331.8mm<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- this makes sure during initial homing, the hotend does not get offset and comes<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- down 4.5 to 5cm after hitting the endstop<br>
+line 849 #define DELTA_HEIGHT 293.33   (default: 320)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- from manual Z-movement to bed check<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- should give 310.13 at LCD when Auto Home<br>
 line 959 #define X_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 960 #define Y_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 961 #define Z_DRIVER_TYPE  TMC2209 (default: A4988)<br>
@@ -176,4 +175,20 @@ If you get a [Ignore] or [Reset] prompt, click on the [Reset] and reBOOT the Kos
 
 You do not need to re-install the Wifi firmware, since you have done it to the SKR2 at the previous 2.0.9.2 Marlin version.<P>
 
-Remember to do: M502, M500 or reset/init eeprom on display
+Remember to do: M502, M500 or reset/init eeprom on display<P>
+  
+J) Bonus<br>
+=======<P>
+If you made some changes to the bed or shifted the endstops, you can do this to set your Delta Height again, old school way.<br>
+- Do an Auto Home, and note the value at the LCD. Example, 338.60<br>
+- Without the probe on, lower the print head down (Motion>Axis>Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
+- Note the value at the LCD. Example +28.47<br>
+- Take note of your Z-Probe Offset value. Example -16.80<br>
+- Update your Configuration.h to [#define DELTA_HEIGHT 293.33]<br>
+  ==> 293.33 =  (338.60-28.47)-16.80<br>
+- Build and re-load the Delta with updated firmware<br>
+- Issue M502 and M500 or Factory Reset/Store Setting<br>
+- Restart the Delta, to be sure.<br>
+- The LCD value after Auto Home will be 310.13<br>
+  => 310.13= 338.60-28.47<br>
+- This is old school way, and you only do it once.<br>
