@@ -845,8 +845,8 @@
     #define DELTA_RADIUS 97.0             // (mm) Get this value from G33 auto calibrate
   #endif
 
-  // Distance between bed and nozzle Z home position WLOO (321.80 from Auto home)
-  #define DELTA_HEIGHT 321.80             // (mm) Get this value from G33 auto calibrate
+  // Distance between bed and nozzle Z home position WLOO (293.33 Manual Check to give 310.13 at LCD)
+  #define DELTA_HEIGHT 293.33             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
