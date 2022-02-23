@@ -187,19 +187,28 @@ Remember to do: M502, M500 or reset/init eeprom on display<P>
 J) Bonus<br>
 =======<P>
 If you made some changes to the bed or shifted the endstops, you can do this to set your Delta Height again, old school way.<br>
-- Do an Auto Home, and note the value at the LCD. Example, 338.60<br>
-- Without the probe on, lower the print head down (Motion>Axis>Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
-- Note the value at the LCD. Example +28.47<br>
-- Take note of your Z-Probe Offset value. Example -16.80<br>
-- Update your Configuration.h to [#define DELTA_HEIGHT 293.33]<br>
-  ==> 293.33 =  (338.60-28.47)-16.80<br>
-- Build and re-load the Delta with updated firmware<br>
-- Issue M502 and M500 or Factory Reset/Store Setting<br>
-- Restart the Delta, to be sure.<br>
-- The LCD value after Auto Home will be 310.13<br>
-  => 310.13= 338.60-28.47<br>
-  - Finally, do the paper check one more time. If it is too high or low, adjust the difference at the >Configuration>Probe Z-Offs setting.<br>
-- Example, if the new check shows -0.375 (too far from bed), the new result should be (16.80+0.375)=17.175<br>
-- Change the offset value at Configuration>Probe Z-Offs. Use the knob to adjust the -16.80 to -17.17<br>
-- Do a Store Settings
-- This is old school way, and you only do it once.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do an Auto Home, and note the value at the LCD. Example, 338.60<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Without the probe on, lower the print head down (Motion>Axis>Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Note the value at the LCD. Example +28.47<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Take note of your Z-Probe Offset value. Example -16.80<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Update your Configuration.h to [#define DELTA_HEIGHT 293.33]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ==> 293.33 =  (338.60-28.47)-16.80<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Build and re-load the Delta with updated firmware<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Issue M502 and M500 or Factory Reset/Store Setting<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Restart the Delta, to be sure.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The LCD value after Auto Home will be 310.13<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  => 310.13= 338.60-28.47<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Finally, do the paper check one more time. If it is too high or low, adjust the difference at the >Configuration>Probe Z-Offs setting.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Example, if the new check shows -0.375 (too far from bed), the new result should be (16.80+0.375)=17.175<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Change the offset value at Configuration>Probe Z-Offs. Use the knob to adjust the -16.80 to -17.17<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do a Store Settings
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This is old school way, and you only do it once.<br>
+  
+K) Enabling UBL<br>
+==============<p>
+Initially I had some problems. The MESH Print came out with two close spots above the center, unprinted. It is just not sticking. I solved it (through friends help):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tightened the 4 screws (that hold the hotend securely) in place, as two of which had slightly loosen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Flipped the glass over, just in case I have a bad glass<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use the LCD Step-byStep UBL guide instead of just issuing all the associated G29/G26 commands as per Youtube guide. This forces the printer to prime out a long filament trail and it helps to clear the nozzle beautifully, thus printing a fuller MESH instead of a skinny MESH.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I also did not include the G29 L1 code into the Cura printer Start Code. The printer knows that it has already been activated.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The few times I use the Wifi Module to issue commands are for G29 T (list the table), G29 S1 and M500 (no need for these two commands as this storing handled in the LCD as well.
