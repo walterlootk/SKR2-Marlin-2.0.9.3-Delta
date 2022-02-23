@@ -159,14 +159,17 @@ Common and NC (default Anycubic 2017) wiring, therefore I am using GND/PC1(X), G
 F) Installation of the BTT ESP8266 ESP-12S Module<br>
 ======================================<P>
 Please refer to the SKR2_ESP8226_Delta github for installation steps.<P>
+  Here: https://github.com/walterlootk/SKR2_ESP8226_DELTA <P>
 
 G) Compilation of BTT ESP8266-ESP-12S Wifi module [4MB]<br>
 =================================<P>
 Please refer to the SKR2_ESP8226_Delta github for installation steps.<P>
+  Here: https://github.com/walterlootk/SKR2_ESP8226_DELTA <P>
 
 H) ESP3D-WEBUI / ESP3D-2.1.1<br>
 =================<P>
 Please refer to the SKR2_ESP8226_Delta github for installation steps.<P>
+Here: https://github.com/walterlootk/SKR2_ESP8226_DELTA <P>
 
 I) How to upload firmware 2.0.9.3 to Anycubic Kossel Printer<br>
 ====================================<P>
