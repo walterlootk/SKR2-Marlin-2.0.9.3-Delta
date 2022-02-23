@@ -1,7 +1,7 @@
 # SKR2-Marlin-2.0.9.3-Delta<br>
 First Edition: 14-02-2022<br>      
 
-Updates: 17-02-2022<br>
+Updates: 23-02-2022<br>
 
 Description<br>
 =========<P>
@@ -95,8 +95,13 @@ line 1475 #define INVERT_Y_DIR false (from true)<br>
 line 1476 #define INVERT_Y_DIR false (from true)<br>
 line 1477 #define INVERT_Y_DIR false (from true)<br>
 line 1485 #define INVERT_E0_DIR false (default:true)<br>
+line 1693 #define AUTO_BED_LEVELING_UBL (enabled)<br>
+line 1702 #define RESTORE_LEVELING_AFTER_G28 (enabled)<br>
 line 1744 #define G26_MESH_VALIDATION (enabled)<br>
-line 1777 #define ABL_BILINEAR_SUBDIVISION (enabled)<br>
+line 1748 #define MESH_TEST_HOTEND_TEMP  220 (default:205) <br>
+line 1749 #define MESH_TEST_BED_TEMP      100 (default:60)<br>
+line 1777 #define ABL_BILINEAR_SUBDIVISION (disnabled)<br>
+line 1793 #define MESH_INSET 15   (default:1)<br>
 line 1895 #define Z_SAFE_HOMING (enabled)<br>
 line 1903 #define HOMING_FEEDRATE_MM_M { (50&#42;60), (50&#42;60), (50&#42;60) } <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- (from 100&#42;60,100&#42;60,100&#42;60)<br>
