@@ -214,4 +214,11 @@ Initially I had some problems. The MESH Print came out with two close spots abov
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Flipped the glass over, just in case I have a bad glass<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use the LCD Step-byStep UBL guide instead of just issuing all the associated G29/G26 commands as per Youtube guide. This forces the printer to prime out a long filament trail and it helps to clear the nozzle beautifully, thus printing a fuller MESH instead of a skinny MESH.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I also did not include the G29 L1 code into the Cura printer Start Code. The printer knows that it has already been activated.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The few times I use the Wifi Module to issue commands are for G29 T (list the table), G29 S1 and M500 (no need for these two commands as this storing handled in the LCD as well.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The few times I use the Wifi Module to issue commands are for G29 T (list the table), G29 S1 and M500 (no need for these two commands as this storing handled in the LCD as well.<br>
+  
+L) Visual Source Code<br>
+==================<p>
+If you have previously installed VSC and suddenly, due to installation of a new program or there was a jert with your computer, you can try the following to get your projects in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Click on File > Open Folder<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Drill down to the Marlin folder - the one that contains the SRC and LIB folders, and click the Select folder button.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Your previously working project(s) will come back to live.                                                                                                                                               
