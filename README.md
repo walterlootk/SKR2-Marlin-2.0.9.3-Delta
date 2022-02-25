@@ -212,6 +212,7 @@ K) Enabling UBL<br>
 Initially I had some problems. The MESH Print came out with two close spots above the center, unprinted. It is just not sticking. I solved it (through friends help):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tightened the 4 screws (that hold the hotend securely) in place, as two of which had slightly loosen<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Flipped the glass over, just in case I have a bad glass<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Found out that it was actually caused by the Y & Z belts. Both are not guitar-string tight. Once tightened, no more sticking issue as well as the layer running with big gaps at certain times.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use the LCD Step-byStep UBL guide instead of just issuing all the associated G29/G26 commands as per Youtube guide. This forces the printer to prime out a long filament trail and it helps to clear the nozzle beautifully, thus printing a fuller MESH instead of a skinny MESH.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- TAKE NOTE: The Manual Priming (from the LCD), although automatic, will continue to prime out the filament UNTIL you click the knob to stop it!!<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also, before  you click on the Validate MESH, please put in your sticky stuff on your bed, if you need to. Pre-heat your bed, if you need to. And, by now, you should have removed your PROBE, if there is a need to, like mine.<br>
