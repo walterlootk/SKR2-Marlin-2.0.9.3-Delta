@@ -140,9 +140,10 @@ line 16 default_envs = BIGTREE_SKR_2<P>
 D) For pins_BTT_SKR_V2_0_common.h [folder: Marlin/src/pins/stm32f4]<br>
 =====================================================<P>
 Commented out line 41 "#define FLASH_EEPROM_EMULATION"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This causes Marlin to use back the internal SD card as the persistent storage, with the file EEPROM.dat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- my time there were bugs. Maybe it is okay to use this in future (store in EEPROM rather than on EEPROM.dat)<P>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This causes Marlin to use back your internal SD card as the persistent storage, with the created file EEPROM.dat<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- just make sure you have an SD Card in yur SDCard slot at all times. You should be as that is where you keep your gCode files<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- otherwise, you will get "No eeprom" error message when doing M500 or "Store Settings"<P>
+  
 I added #define Z_MIN_PIN Z_STOP_PIN below<br>
 line 128 //<br>
 line 129 // Z Probe (when not Z_MIN_PIN)<br>
