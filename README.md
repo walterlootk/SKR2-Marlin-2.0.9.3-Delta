@@ -100,7 +100,7 @@ line 1702 #define RESTORE_LEVELING_AFTER_G28 (enabled)<br>
 line 1744 #define G26_MESH_VALIDATION (enabled)<br>
 line 1748 #define MESH_TEST_HOTEND_TEMP  220 (default:205) <br>
 line 1749 #define MESH_TEST_BED_TEMP      100 (default:60)<br>
-line 1777 #define ABL_BILINEAR_SUBDIVISION (disnabled)<br>
+line 1777 #define ABL_BILINEAR_SUBDIVISION (left enabled)<br>
 line 1793 #define MESH_INSET 15   (default:1)<br>
 line 1895 #define Z_SAFE_HOMING (enabled)<br>
 line 1903 #define HOMING_FEEDRATE_MM_M { (50&#42;60), (50&#42;60), (50&#42;60) } <br>
