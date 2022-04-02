@@ -190,22 +190,19 @@ Remember to do: M502, M500 or reset/init eeprom on display<P>
   
 J) Bonus<br>
 =======<P>
-If you made some changes to the bed or shifted the endstops, you can do this to set your Delta Height again, old school way.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do an Auto Home, and note the value at the LCD. Example, 338.60<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Without the probe on, lower the print head down (Motion>Axis>Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Note the value at the LCD. Example +28.47<br>
+If you made some changes to the bed or shifted the endstops, you can make changes to the Z-Probe Offset, old school way.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do an Auto Home, and note the Z-Height value at the LCD<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Take note of your Z-Probe Offset value. Example -16.80<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Update your Configuration.h to [#define DELTA_HEIGHT 293.33]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ==> 293.33 =  (338.60-28.47)-16.80<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Build and re-load the Delta with updated firmware<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Issue M502 and M500 or Factory Reset/Store Setting<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Restart the Delta, to be sure.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The LCD value after Auto Home will be 310.13<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  => 310.13= 338.60-28.47<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Finally, do the paper check one more time. If it is too high or low, adjust the difference at the >Configuration>Probe Z-Offs setting.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Example, if the new check shows -0.375 (too far from bed), the new result should be (16.80+0.375)=17.175<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Change the offset value at Configuration>Probe Z-Offs. Use the knob to adjust the -16.80 to -17.17<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do a Store Settings
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- If you are printing with ABS, set your bed temperature, e.g. 100C, first.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- It is okay to let the nozzle remain unheated.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Without mounting the probe, lower the print head down >Motion >Axis >Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- If necessary, disable Soft Endstops, (from ON to OFF), to allow for the nozzle to go to negative value.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Take note of the Z-probe variance value from the A4 paper probing, e.g. -0.25<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do this calculation: (Existing Z-probe Offset) + (new Z-Probe variance value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  => (-16.80) + (-0.25) = -17.43 [this is math, so the +/- signs is important]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do a Store Settings.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Power off/power on the Delta, to be sure.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Finally, repeat this process(s) until you are satisfied<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- This is old school way, and you only do it once.<br>
   
 K) Enabling UBL<br>
