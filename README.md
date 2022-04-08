@@ -68,16 +68,16 @@ A) Changes to Configuration.h<br>
 ======================<P>
 line 33 #define ANYCUBIC_PROBE_VERSION 2 (default: 0)<br>
 line 39 #define ANYCUBIC_KOSSEL_ENABLE_BED 1 (default: 0)<br>
-line 107   #define MOTHERBOARD BOARD_BTT_SKR_V2_0_REV_B<br>
-line 118 #define SERIAL_PORT 0 to "3"  (for Wifi module)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- wifi won't work if reversed with serial_port_2<br>
-line 140 #define SERIAL_PORT_2 -1 (enabled)<br>
+line 107 #define MOTHERBOARD BOARD_BTT_SKR_V2_0_REV_B<br>
+line 118 #define SERIAL_PORT 3 (from 0 to "3", for Wifi module)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- wifi won't work if reversed with SERIAL_PORT_2<br>
+line 140 #define SERIAL_PORT_2 -1 (enabled - for USB conection)<br>
 line 141 #define BAUDRATE_2 250000  (enabled)<br>
-line 155 //#define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel SKR2"<br>
-line 498 #define TEMP_SENSOR_5 (default)<br>
+line 155 #define CUSTOM_MACHINE_NAME "ANYCUBIC Kossel SKR2"<br>
+line 498 #define TEMP_SENSOR_0 5 (default)<br>
 line 507 #define TEMP_SENSOR_BED 5 (default)<br>
-line 798 //#define DELTA_HOME_TO_SAFE_ZONE<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- disable so that print head will not go down like 50mm after homing<br>
+line 798 //#define DELTA_HOME_TO_SAFE_ZONE (disabled)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- disabled so that print head will not go down like 50mm after homing<br>
 line 814 #define DELTA_CALIBRATION_DEFAULT_POINTS 4 (No change)<br>
 line 849 #define DELTA_HEIGHT 293.33   (default: 320)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- from manual Z-movement to bed check<br>
@@ -86,7 +86,7 @@ line 959 #define X_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 960 #define Y_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 961 #define Z_DRIVER_TYPE  TMC2209 (default: A4988)<br>
 line 970 #define E0_DRIVER_TYPE TMC2209 (default: A4988)<br>
-line 1069  #define DEFAULT_ACCELERATION          2500 (from 3000)<br>
+line 1069  #define DEFAULT_ACCELERATION         2500 (from 3000)<br>
 line 1071 #define DEFAULT_TRAVEL_ACCELERATION   2500 (from 3000)<br>
 line 1139 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN (disabled)<br>
 line 1317  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -17.175 }<br>
@@ -98,7 +98,7 @@ line 1485 #define INVERT_E0_DIR false (default:true)<br>
 line 1693 #define AUTO_BED_LEVELING_UBL (enabled)<br>
 line 1702 #define RESTORE_LEVELING_AFTER_G28 (enabled)<br>
 line 1744 #define G26_MESH_VALIDATION (enabled)<br>
-line 1748 #define MESH_TEST_HOTEND_TEMP  220 (default:205) <br>
+line 1748 #define MESH_TEST_HOTEND_TEMP  235 (default:205) <br>
 line 1749 #define MESH_TEST_BED_TEMP      100 (default:60)<br>
 line 1777 #define ABL_BILINEAR_SUBDIVISION (left enabled)<br>
 line 1793 #define MESH_INSET 15   (default:1)<br>
@@ -106,27 +106,28 @@ line 1895 #define Z_SAFE_HOMING (enabled)<br>
 line 1903 #define HOMING_FEEDRATE_MM_M { (50&#42;60), (50&#42;60), (50&#42;60) } <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- (from 100&#42;60,100&#42;60,100&#42;60)<br>
 line 2018 #define PREHEAT_1_FAN_SPEED  255   (from 0) <br>
-line 2021#define PREHEAT_2_TEMP_HOTEND 230 (from 240)<br>
+line 2021#define PREHEAT_2_TEMP_HOTEND 235 (from 240)<br>
 line 2022 #define PREHEAT_2_TEMP_BED    100 (from 110)<br>
-line 2024 #define PREHEAT_2_FAN_SPEED    255 (from 0)<br>
+line 2024 #define PREHEAT_2_FAN_SPEED    0 (default)<br>
 line 2037 #define NOZZLE_PARK_FEATURE (enabled)<br>
 line 2163 //#define PRINTCOUNTER (disabled) -else out of memory during compiling<br>
-line 2254 #define SDSUPPORT (default)<br>
+line 2254 #define SDSUPPORT (so that we can use the SDcard slot)<br>
 line 2261 //#define SD_CHECK_AND_RETRY (disabled) -else out of memory during compiling<p>
+line 2356 #define REPRAP_DISCOUNT_SMART_CONTROLLER (I am using the old stock Controller)
 
 B) Changes to Configuration_adv.h<br>
 =========================<p>
 line 511 #define USE_CONTROLLER_FAN (enabled)<br>
-line 517 #define CONTROLLERFAN_SPEED_ACTIVE    190  (from 255)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I am setting about half-strength so that it is not too noisy (old fan)<br>
 line 513 #define CONTROLLER_FAN_PIN FAN2_PIN (enable & set to FAN2_PIN. Default was -1)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- this means I am using PB5. You can type in PB5 or FAN2_PIN<br>
+line 517 #define CONTROLLERFAN_SPEED_ACTIVE    190  (from 255)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I am setting about half-strength so that it is not too noisy (old fan)<br>
 line 519 #define CONTROLLERFAN_IDLE_TIME    20    (From 60)<br> 
 line 611 #define E0_AUTO_FAN_PIN FAN1_PIN   (Default: -1) (for Hotend FAN1, see line 620)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- using FAN1_PIN instead of PB6 is easier to read<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- as FAN_PIN is default defined for FAN0 -Parts Fan BUT<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- make sure Cooling Fan Number in Cura is set to "0" otherwise no fan during print<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I have an enclosure yet still need to enable 100% FAN0 else soggy printing.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I have an enclosure yet still need to enable 20% FAN0 else soggy printing.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- COOLER_AUTO_FAN_PIN is for laser fan use only<br>
 line 1633 #define SDCARD_CONNECTION LCD<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- so that myRepRap Discount Controller can read the SDCard<br>
