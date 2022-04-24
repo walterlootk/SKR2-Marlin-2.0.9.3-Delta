@@ -35,12 +35,12 @@ Running Visual Studio Code 1.64.2<br>
 Load up VSC<br>
 - if you see previous version 2.0.9.2 and do not want to see them on the screen, click File and close all the folders.<br>
 - select File > Open folder and open up the Marlin -2.0.9.3 folder as per this sequence below:<br>
-  >Marlin-2.0.9.3 >Marlin-2.0.x >Marlin [make sure you see folders "lib" and "src"]<P>
+  >Marlin-2.0.9.3 >Marlin-2.0.x >Marlin [you should not see folders "lib" and "src"]<P>
 
 OR at this point in time, you may just CREATE a new project<br>
 - Load up the PIO Home page<br>
 - create a new Project [+ New Project]<br>
-- make sure you use the pop-up "File Explorer" window, to drill to the Marlin folder. Remember, the correct Marlin folder is the one where you can see the "lib" & "src" folders.<br>
+- make sure you use the pop-up "File Explorer" window, to drill to the Marlin folder.<br>
 - click on the "Select" folder button.<br>
 - wait for about 2 seconds and all will be well<P>
 
@@ -51,6 +51,8 @@ If you want to compare this Configuration.h with the current 2.0.9.2, visually, 
 - this 2.0.9.2 Configuration.h would now be presented in this split window. You can move your cursor to the redundant 2nd Configuration.h file and click on the "x" to close it.<br>
 - with this, you should be able to compare the 2.0.9.3 against the 2.0.9.2 for customised edit.<br>
 - once you are done with the changes, close the Split Editor.<P>
+
+If you find that, for some reasons, the PlatformIO:Build icon has disappeared from the bottom-left status bar, do this. Righ-click on the status bar and select PlatformIO:Toolbar.<br>
 
 Contents Index<br>
 ===========<P>
@@ -86,8 +88,8 @@ line 959 #define X_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 960 #define Y_DRIVER_TYPE TMC2209 (default: A4988)<br>
 line 961 #define Z_DRIVER_TYPE  TMC2209 (default: A4988)<br>
 line 970 #define E0_DRIVER_TYPE TMC2209 (default: A4988)<br>
-line 1069  #define DEFAULT_ACCELERATION         2500 (from 3000)<br>
-line 1071 #define DEFAULT_TRAVEL_ACCELERATION   2500 (from 3000)<br>
+line 1069  #define DEFAULT_ACCELERATION         600 (from 3000)<br>
+line 1071 #define DEFAULT_TRAVEL_ACCELERATION   1000 (from 3000)<br>
 line 1139 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN (disabled)<br>
 line 1317  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -17.175 }<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- default was -16.80<br>
@@ -98,15 +100,15 @@ line 1485 #define INVERT_E0_DIR false (default:true)<br>
 line 1693 #define AUTO_BED_LEVELING_UBL (enabled)<br>
 line 1702 #define RESTORE_LEVELING_AFTER_G28 (enabled)<br>
 line 1744 #define G26_MESH_VALIDATION (enabled)<br>
-line 1748 #define MESH_TEST_HOTEND_TEMP  235 (default:205) <br>
+line 1748 #define MESH_TEST_HOTEND_TEMP  230 (default:205) <br>
 line 1749 #define MESH_TEST_BED_TEMP      100 (default:60)<br>
 line 1777 #define ABL_BILINEAR_SUBDIVISION (left enabled)<br>
 line 1793 #define MESH_INSET 15   (default:1)<br>
 line 1895 #define Z_SAFE_HOMING (enabled)<br>
-line 1903 #define HOMING_FEEDRATE_MM_M { (50&#42;60), (50&#42;60), (50&#42;60) } <br>
+line 1903 #define HOMING_FEEDRATE_MM_M { (35&#42;60), (35&#42;60), (35&#42;60) } <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- (from 100&#42;60,100&#42;60,100&#42;60)<br>
 line 2018 #define PREHEAT_1_FAN_SPEED  255   (from 0) <br>
-line 2021#define PREHEAT_2_TEMP_HOTEND 235 (from 240)<br>
+line 2021#define PREHEAT_2_TEMP_HOTEND 230 (from 240)<br>
 line 2022 #define PREHEAT_2_TEMP_BED    100 (from 110)<br>
 line 2024 #define PREHEAT_2_FAN_SPEED    0 (default)<br>
 line 2037 #define NOZZLE_PARK_FEATURE (enabled)<br>
