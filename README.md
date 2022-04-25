@@ -222,7 +222,7 @@ Initially I had some problems. The MESH Print came out with two close spots abov
   
 L) Visual Source Code<br>
 ==================<p>
-If you have previously installed VSC and suddenly, due to installation of a new program or there was a jert with your computer, you can try the following to get your projects in<br>
+If you have previously installed VSC and suddenly, due to installation of a new program or there was a mishap with your computer, you can try the following to get your projects in<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Click on File > Open Folder<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Drill down to the Marlin folder - the one that contains the SRC and LIB folders, and click the Select folder button.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Drill down to the Marlin folder - the one that doesnot contain the SRC and LIB folders, and click the Select folder button.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Your previously working project(s) will come back to live.                                                                                                                                               
