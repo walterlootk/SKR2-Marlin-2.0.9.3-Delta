@@ -201,8 +201,8 @@ If you made some changes to the bed or shifted the endstops, you can make change
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Without mounting the probe, lower the print head down >Motion >Axis >Z-Axis, until it tugs gently (not hard, almost loose) at your A4 paper.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- If necessary, disable Soft Endstops, (from ON to OFF), to allow for the nozzle to go to negative value.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Take note of the Z-probe variance value from the A4 paper probing, e.g. -0.25<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do this calculation: (Existing Z-probe Offset) - (new Z-Probe variance value)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  => (-16.80) - (-0.25) = -16.55 [this is math, so the +/- signs is important]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do this calculation: (Existing Z-probe Offset) + (new Z-Probe variance value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  => (-16.80) + (-0.25) = -16.85 [this is math, so the +/- signs is important]<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do a Store Settings.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Power off/power on the Delta, to be sure.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Finally, repeat this process(s) until you are satisfied<br>
